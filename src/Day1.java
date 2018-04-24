@@ -2,7 +2,9 @@ import java.util.Scanner;
 
 public class Day1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
+		String userAnswer;
+		
 		do {
 			Scanner scan = new Scanner(System.in);
 			
@@ -16,11 +18,12 @@ public class Day1 {
 			System.out.println("the area is " + area);
 			
 			double perimeter = (length + width) * 2;
+			scan.nextLine();
 			System.out.println("the perimeter is " + perimeter);
 			
-			System.out.println("Continue? Y/N");
+			System.out.println("Continue? Y/N: ");
+			userAnswer = scan.nextLine(); 
 		}
-		
-	
+		while(userAnswer.equals("y"));
 	}
 }
